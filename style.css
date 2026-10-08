@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #fff4f4;
+    color: #333;
+}
+/* NAVBAR */
+.navbar {
+    background: #07101c;
+    padding: 12px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar-brand {
+    color: #f3c75f;
+    font-size: 23px;
+    font-weight: bold;
+}
+.navbar-brand span {
+    margin-left: 8px;
+}
+.photo-section {
+    position: relative;
+    overflow: hidden;
+}
+.gallery-bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .35;
+}
+.gallery-content {
+    position: relative;
+    z-index: 1;
+}
+.nav-link {
+    color: white !important;
+    margin: 0 12px;
+    transition: 0.3s;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: #f3c75f !important;
+}
+.heart-nav {
+    font-size: 25px;
+    color: #f3c75f !important;
+}
+/* HERO */
+.hero {
+    height: 500px;
+    position: relative;
+    background-image: url("images/hero.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(4, 9, 18, 0.35);
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.special {
+    color: #f6d475;
+    letter-spacing: 6px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.hero h2 {
+    font-size: 50px;
+    font-family: cursive;
+    margin: 0;
+}
+.hero h1 {
+    color: #f4c64f;
+    font-size: 85px;
+    font-family: cursive;
+    margin: 0;
+}
+.hero h1 span {
+    color: #f4c64f;
+}
+.gold-line {
+    width: 150px;
+    height: 3px;
+    background: #f4c64f;
+    margin: 10px auto 20px;
+}
+.hero p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+.side-message {
+    position: absolute;
+    z-index: 2;
+    font-family: cursive;
+    font-size: 20px;
+    line-height: 1.4;
+}
+.left {
+    left: 4%;
+}
+.right {
+    right: 4%;
+}
+/* MUSIC */
+.music-bar {
+    background: #ffdce7;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 12px 5%;
+}
+.music-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.music-icon {
+    width: 45px;
+    height: 45px;
+    background: #f5a9c8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+.music-info h5 {
+    margin: 0;
+}
+.music-info p {
+    margin: 0;
+    font-size: 12px;
+}
+.music-controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.music-controls button {
+    border: none;
+    background: transparent;
+    font-size: 18px;
+}
+.play-btn {
+    background: #222 !important;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/* PHOTO SECTION */
+.photo-section {
+    padding: 55px 5%;
+    background: #fff1f3;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+.section-title h2 {
+    font-family: cursive;
+    font-size: 38px;
+}
+.section-title p {
+    color: #666;
+}
+.small-title {
+    color: #222;
+}
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.photo-card {
+    background: white;
+    padding: 10px 10px 15px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: 0.4s;
+}
+.photo-card:hover {
+    transform: translateY(-15px) rotate(0deg) scale(1.05);
+}
+.photo-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.photo-card p {
+    margin: 10px 0 0;
+    text-align: center;
+    font-family: cursive;
+}
+.rotate-left {
+    transform: rotate(-3deg);
+}
+.rotate-right {
+    transform: rotate(3deg);
+}
+/* POPUP */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+.popup img {
+    max-width: 85%;
+    max-height: 85%;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+/* VIDEO SECTION */
+.video-section {
+    background: #eeeaff;
+    padding: 45px 5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+.video-container {
+    background: #ddd9ff;
+    padding: 25px;
+    border-radius: 12px;
+}
+.video-heading h2 {
+    font-family: cursive;
+}
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.video-card video {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.video-card h5 {
+    text-align: center;
+    margin-top: 8px;
+}
+/* PLAYLIST */
+.playlist {
+    background: #fff1d9;
+    padding: 25px;
+    border-radius: 12px;
+}
+.playlist h2 {
+    font-family: cursive;
+}
+.playlist > p {
+    font-size: 13px;
+}
+.song {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+.song button {
+    border: 1px solid #555;
+    background: transparent;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.song span {
+    flex: 1;
+}
+.song small {
+    color: #555;
+}
+/* MESSAGE */
+.message-section {
+    min-height: 260px;
+    padding: 45px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffdce8;
+    background-image: radial-gradient(#fff 1px, transparent 1px);
+    background-size: 25px 25px;
+}
+.message {
+    text-align: center;
+    max-width: 650px;
+    line-height: 1.6;
+}
+.message h4 {
+    font-family: cursive;
+}
+.message h3 {
+    font-family: cursive;
+}
+.message-left,
+.message-right {
+    font-family: cursive;
+    font-size: 30px;
+    color: #333;
+}
+.message-right {
+    background: #f49fc3;
+    padding: 20px 35px;
+    transform: rotate(-4deg);
+}
+/* FOOTER */
+footer {
+    background: #050c15;
+    color: white;
+    padding: 40px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.footer-side {
+    font-family: cursive;
+    font-size: 20px;
+}
+.footer-center h2 {
+    color: #f4c64f;
+    font-family: cursive;
+}
+.footer-center p {
+    margin-bottom: 20px;
+}
+.more-btn {
+    display: inline-block;
+    background: #f4c64f;
+    color: #222;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.more-btn:hover {
+    background: white;
+    color: #222;
+    transform: scale(1.05);
+}
+/* FLOATING HEARTS */
+.hearts span {
+    position: fixed;
+    bottom: -30px;
+    z-index: 1500;
+    animation: floatHeart 7s linear infinite;
+    pointer-events: none;
+}
+.hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+.hearts span:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+.hearts span:nth-child(3) {
+    left: 45%;
+    animation-delay: 4s;
+}
+.hearts span:nth-child(4) {
+    left: 65%;
+    animation-delay: 1s;
+}
+.hearts span:nth-child(5) {
+    left: 80%;
+    animation-delay: 3s;
+}
+.hearts span:nth-child(6) {
+    left: 90%;
+    animation-delay: 5s;
+}
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.4) rotate(30deg);
+        opacity: 0;
+    }
+}
+/* MOBILE */
+@media (max-width: 900px) {
+    .photo-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .video-section {
+        grid-template-columns: 1fr;
+    }
+    .message-section {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .side-message {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .hero {
+        height: 450px;
+    }
+    .hero h2 {
+        font-size: 35px;
+    }
+    .hero h1 {
+        font-size: 60px;
+    }
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .video-gallery {
+        grid-template-columns: 1fr;
+    }
+    .music-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    footer {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .message-left,
+    .message-right {
+        font-size: 24px;
+    }
+}
