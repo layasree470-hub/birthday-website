@@ -172,6 +172,8 @@ body {
 }
 /* PHOTO SECTION */
 .photo-section {
+    position: relative;
+    overflow: hidden;
     padding: 55px 5%;
     background: #fff1f3;
 }
