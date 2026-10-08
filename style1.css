@@ -28,12 +28,12 @@
     }
 }
 body{
-    background-image: url(images/33.jpeg);
+    background-image: url(33.jpeg);
     background-repeat: repeat;
     background-size:  20% auto;
 }
 .bg{
-    background-image: url(images/lotus.jpg);
+    background-image: url(lotus.jpg);
     background-repeat: repeat;
     background-size: 20% auto;
 }
